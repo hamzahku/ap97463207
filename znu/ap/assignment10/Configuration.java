@@ -8,10 +8,7 @@ package assignment10;
 import java.util.Queue;
 import java.util.Set;
 
-/**
- *
- * @author phoenix71
- */
+
 public class Configuration {
     int limit_dl;
     Queue<String> q;
