@@ -1,17 +1,23 @@
 package assignment8;
 
-public class studystudent extends student {
+public class Studying extends studentMain {
+
+
+
     private int units;
 
-    public studystudent(String name, String lastname, int studentNumber, int units) {
+    public Studying(String name, String lastname, int studentNumber, int units) {
         this.units = units;
         this.setName(name);
         this.setLastName(lastname);
         this.setStudentNumber(studentNumber);
     }
-    public studystudent(){
+
+
+    public Studying(){
 
     }
+
 
     public int getUnits() {
         return units;
@@ -25,11 +31,15 @@ public class studystudent extends student {
         }
     }
 
+
+
     public class WrongUnitsNumber extends Throwable {
         public WrongUnitsNumber(){
             super("worng units => units most be smaller than 250");
         }
     }
+
+
 
     @Override
     public String toString() {

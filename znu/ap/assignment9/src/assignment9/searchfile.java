@@ -1,9 +1,11 @@
 package assignment9;
 
 import java.io.File;
-import java.io.IOException;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.PrintStream;
+import java.lang.String;
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
 
 public class searchfile {
@@ -32,10 +34,13 @@ public class searchfile {
     }
 
 
+
     public void searchDirectory(File directory, String fileNameToSearch) {
         setFileNameToSearch(fileNameToSearch);
         if (directory.isDirectory()) {
+            System.out.println("________The search process________");
             search(directory);
+
         } else {
             System.out.println(directory.getAbsoluteFile() + " is not a directory!");
         }
@@ -44,7 +49,9 @@ public class searchfile {
     private void search(File file) {
 
         if (file.isDirectory()) {
-            //System.out.println("Searching directory ... " + file.getAbsoluteFile());
+
+            System.out.println("Searching directory ... " + file.getAbsoluteFile());
+
             //do you have permission to read this directory?
             if (file.canRead()) {
                 for (File temp : file.listFiles()) {
@@ -53,6 +60,7 @@ public class searchfile {
                     } else {
                         if (getFileNameToSearch().equals(temp.getName().toLowerCase())) {
                             result.add(temp.getAbsoluteFile().toString());
+
 
                         }
 
@@ -63,6 +71,7 @@ public class searchfile {
                 System.out.println(file.getAbsoluteFile() + "Permission Denied");
             }
         }
+
 
     }
 

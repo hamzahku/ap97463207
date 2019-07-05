@@ -1,15 +1,17 @@
-package assignment8;
 
-public class gradutestudent extends student {
+package assignment8;
+public class graduate extends studentMain{
+
+
     private int graduteYear;
 
-    public gradutestudent(String name, String lastname, int studentNumber, int graduteYear) {
+    public graduate(String name, String lastname, int studentNumber, int graduteYear) {
         this.graduteYear = graduteYear;
         this.setName(name);
         this.setLastName(lastname);
         this.setStudentNumber(studentNumber);
     }
-    public gradutestudent(){
+    public graduate(){
 
     }
 
@@ -33,7 +35,7 @@ public class gradutestudent extends student {
 
     @Override
     public String toString() {
-        String info = String.format("Gradute\t%s\t%s\t%d\t%d\n",this.getName(),this.getLastName(),this.getStudentNumber(),this.getGraduteYear());
+        String info = String.format("Graduate\t%s\t%s\t%d\t%d\n",this.getName(),this.getLastName(),this.getStudentNumber(),this.getGraduteYear());
         return info;
     }
 }
