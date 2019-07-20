@@ -1,0 +1,5 @@
+Study	hamzah	kuhlani	97463207	210
+Study	hamzah	kuhlani	97463207	100
+Graduate	ali	moradi	98463205	1395
+Study	mohammed	ali	90463225	120
+Graduate	hamwwd	rahmani	90463221	1394
